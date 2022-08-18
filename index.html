@@ -44,8 +44,6 @@
     </div>
 
   </body>
-   <!--- import scrip imageTransform.js -->
-   <script src="imageTransform.js"></script>
   <script>
     let img64 = '';
     imgInp.onchange = (evt) => {
@@ -55,8 +53,6 @@
         reader.readAsDataURL(file);
         reader.onload = (evt) => {
           img64 = evt.target.result;
-          let x= convertJPG(img64)
-          console.log( x)
           document.getElementById('blah').src = img64;
         };
       }
